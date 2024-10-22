@@ -9,18 +9,17 @@ public class Ejercicio1 {
      * devuelve La suma de ambos valores.
 
      */
-    private static void Sum(float x,float y ){
-
-        System.out.println((x+y));
+    private static int Sum(int x,int y ){
+        return x+y;
     }
     public static void main(String[] args) {
-        float primerNumerom, segundoNumero;
+        int primerNumerom, segundoNumero;
 
         Scanner scanner= new Scanner(System.in);
         System.out.println("Ingrese el primer numero");
-        primerNumerom = Float.parseFloat(scanner.nextLine());
+        primerNumerom = Integer.parseInt(scanner.nextLine());
         System.out.println("Ingrese el segundo numero");
-        segundoNumero = Float.parseFloat(scanner.nextLine());
+        segundoNumero = Integer.parseInt(scanner.nextLine());
         scanner.close();
         //Llamada a la funcion Sum
         Sum(primerNumerom,segundoNumero);
