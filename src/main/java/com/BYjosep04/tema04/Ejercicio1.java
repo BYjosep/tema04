@@ -20,6 +20,7 @@ public class Ejercicio1 {
         primerNumerom = Float.parseFloat(scanner.nextLine());
         System.out.println("Ingrese el segundo numero");
         segundoNumero = Float.parseFloat(scanner.nextLine());
+        scanner.close();
         //Llamada a la funcion Sum
         Sum(primerNumerom,segundoNumero);
 
