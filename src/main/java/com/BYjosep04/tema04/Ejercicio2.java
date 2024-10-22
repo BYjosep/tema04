@@ -14,25 +14,29 @@ public class Ejercicio2 {
 
     }
     // Calculador de area
+    /**
+     * Calcula el área de un círculo.
+     * @param radio El radio del círculo.
+     * @return El área calculada del círculo.
+     * @see Math#PI
+     * */
     public static double Area(float radio){
-        /**
-          Calcula el área de un círculo.
-          @param radio El radio del círculo.
-         * @return El área calculada del círculo.
-         * @see Math#PI
-         * */
+
         if (radio < 0) {
             System.err.println("El radio no puede ser menor de 0");
         }
         return Math.PI * radio * radio;
     }
+
+    //Calcula la circunferencia
+    /**
+     * Calcula el área de un círculo.
+     * @param radio El radio del círculo.
+     * @return La circunferencia calculada del círculo.
+     * @see Math#PI
+     * */
     public static double Circunferencia(float radio){
-        /**
-         * Calcula el área de un círculo.
-         * @param radio El radio del círculo.
-         * @return La circunferencia calculada del círculo.
-         * @see Math#PI
-         * */
+
         if (radio < 0) {
             System.err.println("El radio no puede ser menor de 0");
         }

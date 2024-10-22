@@ -3,13 +3,14 @@ package com.BYjosep04.tema04;
 import java.util.Scanner;
 
 public class Ejercicio1 {
-    private static void Sum(float x,float y ){
     /**
      * @param x El primer valor.
      * @param y El segundo valor.
-     * @return La suma de ambos valores.
+     * devuelve La suma de ambos valores.
 
-    */
+     */
+    private static void Sum(float x,float y ){
+
         System.out.println((x+y));
     }
     public static void main(String[] args) {
