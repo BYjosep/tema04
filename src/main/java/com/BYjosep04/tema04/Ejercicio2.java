@@ -30,7 +30,7 @@ public class Ejercicio2 {
 
     //Calcula la circunferencia
     /**
-     * Calcula el área de un círculo.
+     * Calcula la circunferencia de un círculo.
      * @param radio El radio del círculo.
      * @return La circunferencia calculada del círculo.
      * @see Math#PI
