@@ -29,4 +29,19 @@ public class IO {
         scanner.close();
         return mensajeLeido;
     }
+    /**
+     * Apartir de dos numeros devuelve un true o false
+     * @param a El primer parametro
+     * @param b El segundo parametro
+     * @return Retorna el valor true si el primer numero es el mayor y false si es el segundo
+     */
+    public static boolean Mayor(float a, float b){
+        boolean mayor;
+        if (a>b){
+            mayor=true;
+        }else {
+            mayor=false;
+        }
+        return mayor;
+    }
 }
