@@ -22,7 +22,7 @@ public class Ejercicio1 {
         segundoNumero = Integer.parseInt(scanner.nextLine());
         scanner.close();
         //Llamada a la funcion Sum
-        Sum(primerNumerom,segundoNumero);
+        System.out.println(Sum(primerNumerom,segundoNumero));
 
     }
 }
