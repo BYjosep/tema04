@@ -16,7 +16,7 @@ public class Ejercicio4 {
         System.out.println("Ingrese el cuarto valor");
         d= Float.parseFloat(scanner.nextLine());
         scanner.close();
-        valorMayor=Mayor(a,b,c,d);
+        valorMayor=mayor(a,b,c,d);
         switch (valorMayor){
             case 1-> System.out.printf("El valor mayor es %f que es el 1º valor introducido",a);
             case 2-> System.out.printf("El valor mayor es %f que es el 2º valor introducido",b);
@@ -33,7 +33,7 @@ public class Ejercicio4 {
      * @param d Si el cuarto valor es el mayor es 4
      * @return Retorna un valor de 1 al 4
      */
-    public static int Mayor(float a,float b,float c,float d){
+    public static int mayor(float a,float b,float c,float d){
         int mayor=0;
         if(a>b && a>c && a>d) {
             mayor =1;
