@@ -10,12 +10,18 @@ public class Ejercicio7 {
         numero = Integer.parseInt(scanner.nextLine());
         scanner.close();
         total =factorial(numero);
-        if (total<0){
+        if (total<=0){
             System.err.println("El valor representado no es el correctodebido a un overflow");
         }
         System.out.println(numero + "! = " + total);
     }
 
+    /**
+     * Apartir de un valor entero int es capaz de devolver un long.
+     * Si se exede demasiado pasa a valer 0
+     * @param numero variable de entrada de formato int
+     * @return devuelve el factorial del parametro de entrada en formato long
+     */
     public static long factorial(int numero){
          long factorial=1;
 
