@@ -5,20 +5,16 @@ import java.util.Scanner;
 public class Ejercicio3 {
     public static void main(String[] args) {
         float x,y;
-        boolean test;
+        float test;
         Scanner scanner = new Scanner(System.in);
         System.out.println("Ingrese el primer numero");
         x= Float.parseFloat(scanner.nextLine());
         System.out.println("Ingrese el segundo numero");
         y= Float.parseFloat(scanner.nextLine());
-        boolean mayor;
+        float mayor;
         scanner.close();
-        test=Mayor(x,y);
-        if(test){
-            System.out.println("El primer numero es el mayor");
-        }else {
-            System.out.println("El segundo numero es mayor");
-        }
+        test=mayor(x,y);
+        System.out.println("El numero mayor es"+test);
 
     }
 
@@ -28,12 +24,12 @@ public class Ejercicio3 {
      * @param b El segundo parametro
      * @return Retorna el valor true si el primer numero es el mayor y false si es el segundo
      */
-    public static boolean Mayor(float a, float b){
-        boolean mayor;
+    public static float mayor(float a, float b){
+        float mayor;
         if (a>b){
-            mayor=true;
+            mayor= a;
         }else {
-            mayor=false;
+            mayor= b;
         }
         return mayor;
     }

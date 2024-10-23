@@ -38,7 +38,7 @@ public class IO {
      * @param b El segundo parametro
      * @return Retorna el valor true si el primer numero es el mayor y false si es el segundo
      */
-    public static boolean Mayor(float a, float b) {
+    public static boolean mayor(float a, float b) {
         boolean mayor;
         if (a > b) {
             mayor = true;
@@ -58,7 +58,7 @@ public class IO {
      * @param d Si el cuarto valor es el mayor es 4
      * @return Retorna un valor de 1 al 4
      */
-    public static int Mayor(float a, float b, float c, float d) {
+    public static int mayor(float a, float b, float c, float d) {
         int mayor = 0;
         if (a > b && a > c && a > d) {
             mayor = 1;
