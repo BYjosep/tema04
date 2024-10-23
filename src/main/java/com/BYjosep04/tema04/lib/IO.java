@@ -8,6 +8,7 @@ import java.util.Scanner;
  * Libreria de entrada y salida
  */
 public class IO {
+    public static  Scanner scanner = new Scanner(System.in);
     /**
      * Solicita un messaje y valida si esta comprendido entre longitudMinima y longitudMaxima
      *
@@ -19,7 +20,7 @@ public class IO {
     public static String solicitarString(String mensaje, int longitudMinima, int longitudMaxima) {
         String mensajeLeido;
         boolean verificacion = true;
-        Scanner scanner = new Scanner(System.in);
+
         do {
             System.out.println(mensaje);
             mensajeLeido = scanner.nextLine();
@@ -29,7 +30,6 @@ public class IO {
             }
 
         } while (!verificacion);
-        scanner.close();
         return mensajeLeido;
     }
 
@@ -87,6 +87,9 @@ public class IO {
             resultado += imprimir;
         }
         return resultado;
+    }
+    public static void liberacion(){
+        scanner.close();
     }
 }
 
