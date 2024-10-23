@@ -2,6 +2,8 @@ package com.BYjosep04.tema04.lib;
 
 import java.util.Scanner;
 
+
+
 /**
  * Libreria de entrada y salida
  */
@@ -40,11 +42,7 @@ public class IO {
      */
     public static boolean mayor(float a, float b) {
         boolean mayor;
-        if (a > b) {
-            mayor = true;
-        } else {
-            mayor = false;
-        }
+        mayor = a > b;
         return mayor;
     }
 
@@ -72,4 +70,23 @@ public class IO {
         return mayor;
 
     }
+
+    public static String repetir(char caracter, int cantidad, int lineas) {
+        String resultado = "";
+        for (int i = 0; i < lineas; i++) {
+            resultado += repetirCol(caracter, cantidad);
+        }
+        return resultado;
+    }
+
+    public static String repetirCol(char imprimir, int columna) {
+        String resultado = "";
+        if (columna <= 0) {
+            return null;
+        } else {
+            resultado += imprimir;
+        }
+        return resultado;
+    }
 }
+
