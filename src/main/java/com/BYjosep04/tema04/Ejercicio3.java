@@ -11,7 +11,6 @@ public class Ejercicio3 {
         x= Float.parseFloat(scanner.nextLine());
         System.out.println("Ingrese el segundo numero");
         y= Float.parseFloat(scanner.nextLine());
-        float mayor;
         scanner.close();
         test=mayor(x,y);
         System.out.println("El numero mayor es"+test);
