@@ -6,6 +6,12 @@ public class Ejercicio11 {
     public static void main(String[] args) {
         quiniela();
     }
+
+    /**
+     * Funcion para imprimir una quiniela de 15 partidos
+     * El resultado de la quiniela es random entre 0 y 2
+     * siendo O el empate representado como x
+     */
     public static void quiniela(){
         int partido;
         Random random= new Random();

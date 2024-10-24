@@ -18,6 +18,10 @@ public class Ejercicio10 {
         } while (numero >= 0);
     }
 
+    /**
+     *
+     * @param numero ingresar el numero
+     */
     public static void tablaMultiplicar(int numero) {
         System.out.printf("\nTabla de multiplicar del %d :", numero);
         for (int i = 1; i <= 10; i++) {
