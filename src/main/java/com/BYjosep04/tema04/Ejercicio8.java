@@ -19,6 +19,15 @@ public class Ejercicio8 {
         capicua=esCapicua(a,b,c,d);
         System.out.println(capicua);
     }
+
+    /**
+     *
+     * @param a primer digito
+     * @param b segundo digito
+     * @param c tercer digito
+     * @param d cuarto digito
+     * @return true o false
+     */
     public static Boolean esCapicua( int a ,int b, int c, int d){
         boolean esCapicua;
         esCapicua = a == d && b == c;
