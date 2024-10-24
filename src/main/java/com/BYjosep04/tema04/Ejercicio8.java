@@ -5,7 +5,7 @@ import java.util.Scanner;
 public class Ejercicio8 {
     public static void main(String[] args) {
         int a,b,c,d;
-        boolean capicua;
+        String capicua;
         Scanner scanner= new Scanner(System.in);
         System.out.println("Ingrese el 1º numero");
         a= Integer.parseInt(scanner.nextLine());
@@ -28,10 +28,16 @@ public class Ejercicio8 {
      * @param d cuarto digito
      * @return true o false
      */
-    public static Boolean esCapicua( int a ,int b, int c, int d){
+    public static String esCapicua( int a ,int b, int c, int d){
         boolean esCapicua;
+        String capicua;
         esCapicua = a == d && b == c;
-        return esCapicua;
+        if (esCapicua){
+            capicua = "Es capicua";
+        }else {
+            capicua = "No es capicua";
+        }
+        return capicua;
 
     }
 }
