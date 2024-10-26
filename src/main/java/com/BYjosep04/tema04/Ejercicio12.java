@@ -21,7 +21,7 @@ public class Ejercicio12 {
      * @return mediante el enumerado Nota devuelve el string necesario
      */
     public static String calificador(int nota) {
-        String notaAlfabetica = "hola";
+        String notaAlfabetica;
 
 
         switch (nota) {
