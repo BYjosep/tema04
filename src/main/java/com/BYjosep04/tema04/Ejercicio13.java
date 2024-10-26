@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class Ejercicio13 {
     public static void main(String[] args) {
-        byte opcion = 2;
+        byte opcion ;
         String mensaje,nombre;
         /*
         * Opcion 1 -> Valenciano
