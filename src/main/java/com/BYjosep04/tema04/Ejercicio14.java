@@ -25,8 +25,6 @@ public class Ejercicio14 {
     public static double combinatorio(long primerNumero, long segundoNumero, long tercerNumero){
         double resultado;
         resultado = primerNumero/((double)segundoNumero*tercerNumero);
-
-
         return resultado;
     }
     /**
