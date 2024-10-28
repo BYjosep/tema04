@@ -73,9 +73,7 @@ public class Ejercicio15 {
                                 puntosPlayer = 0;
                             } else if (puntosCPU > puntosPlayer) { // Gana CPU
                                 if (puntosCPU == 11) {
-                                    System.out.println("\n$$$$$$$$$$$$$$$$");
-                                    System.out.println("$$$$ ¡ONCE! $$$$");
-                                    System.out.println("$$$$$$$$$$$$$$$$");
+                                    once();
                                     System.out.println("\nDoble porra para CPU\n");
                                     porrasCPU += 2;
                                 } else {
@@ -102,15 +100,10 @@ public class Ejercicio15 {
                         porrasPlayer += 2;
                         puntosCPU = 0;
                         puntosPlayer = 0;
-                        System.out.println("\n$$$$$$$$$$$$$$$$");
-                        System.out.println("$$$$ ¡ONCE! $$$$");
-                        System.out.println("$$$$$$$$$$$$$$$$");
+                        once();
                         System.out.println("\n¡Bonificación! Doble porra");
 
-                        System.out.println("\n**********************");
-                        System.out.println("* " + porrasPlayer + " PLAYER  -  CPU " + porrasCPU + " *");
-                        System.out.println("**********************");
-                        System.out.print("\nPulsa intro para continuar...");
+                        quienGana(porrasPlayer,porrasCPU);
                         scanner.nextLine();
                     } else {
                         // El jugador se ha pasado
@@ -119,10 +112,7 @@ public class Ejercicio15 {
                         porrasCPU += 1;
                         puntosCPU = 0;
                         puntosPlayer = 0;
-                        System.out.println("\n**********************");
-                        System.out.println("* " + porrasPlayer + " PLAYER  -  CPU " + porrasCPU + " *");
-                        System.out.println("**********************");
-                        System.out.print("\nPulsa intro para continuar...");
+                        quienGana(porrasPlayer, porrasCPU);
                         scanner.nextLine();
                     }
                 } while (porrasPlayer < 5 && porrasCPU < 5);
@@ -134,5 +124,17 @@ public class Ejercicio15 {
             }
         } while (opcion != 0);
         return salida;
+    }
+    public static void quienGana(int porrasPlayer, int porrasCPU){
+        System.out.println("\n**********************");
+        System.out.println("* " + porrasPlayer + " PLAYER  -  CPU " + porrasCPU + " *");
+        System.out.println("**********************");
+        System.out.print("\nPulsa intro para continuar...");
+    }
+
+    public static void once(){
+        System.out.println("\n$$$$$$$$$$$$$$$$");
+        System.out.println("$$$$ ¡ONCE! $$$$");
+        System.out.println("$$$$$$$$$$$$$$$$");
     }
 }
