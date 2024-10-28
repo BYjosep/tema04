@@ -89,10 +89,7 @@ public class Ejercicio15 {
                                 porrasCPU++;
                                 porrasPlayer++;
                             }
-                            System.out.println("\n**********************");
-                            System.out.println("* " + porrasPlayer + " PLAYER  -  CPU " + porrasCPU + " *");
-                            System.out.println("**********************");
-                            System.out.print("\nPulsa intro para continuar...");
+                            quienGana(porrasPlayer, porrasCPU);
                             scanner.nextLine();
                         }
                     } else if (puntosPlayer == 11) {
