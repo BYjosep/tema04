@@ -4,7 +4,6 @@ import java.time.LocalDate;
 import java.time.Period;
 import java.time.format.DateTimeFormatter;
 import java.util.Scanner;
-import java.util.zip.DataFormatException;
 
 public class Ejercicio1 {
     public static void main(String[] args) {
