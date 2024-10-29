@@ -35,10 +35,10 @@ public class Ejercicio3 {
 
     }
 
-    public static /*double*/void calculadorPlanetario(LocalDate fechaNacimiento, enum Planeta.){
+    public static /*double*/void calculadorPlanetario(LocalDate fechaNacimiento, Planeta planeta){
     long dias =Ejercicio2.diasEdad(fechaNacimiento);
     float calculo=0;
-        switch (Planeta.values().length){
+        switch (planeta.ordinal()){
         case 0 -> System.out.println("Mercurio"); //calculo=  dias/(float)87.9;
     }
     //return calculo;
