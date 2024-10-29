@@ -1,4 +1,4 @@
-package com.BYjosep04.tema04;
+package com.BYjosep04.tema04.metodos;
 
 import java.util.Scanner;
 
