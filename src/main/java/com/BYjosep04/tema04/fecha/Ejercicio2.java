@@ -15,6 +15,12 @@ public class Ejercicio2 {
         LocalDate fechaNacimiento = LocalDate.parse(nacimiento,formatter);
         System.out.printf("An pasado %d dias desde que has nacido\n", diasEdad(fechaNacimiento));
     }
+
+    /**
+     *
+     * @param fechaNacimiento la fecha en que la persona ha nacido
+     * @return Devuelve la diferencia entre la fecha de nacimiento y la actual
+     */
     public static long diasEdad(LocalDate fechaNacimiento){
         LocalDate ahora = LocalDate.now();
         return ChronoUnit.DAYS.between(fechaNacimiento, ahora);
