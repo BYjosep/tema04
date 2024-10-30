@@ -36,6 +36,14 @@ public class Ejercicio3 {
         System.out.printf("Desde la fecha %s hasta hoy han pasado %f años", nacimiento,resultado);
     }
 
+    /**
+     *
+     * @param fechaNacimiento fecha que se introduce ya parseada con el formato(dd/MM/yyyy)
+     * @param planeta enumerado con los planetas
+     * @return Devuelve un double con el valor en años de la division
+     * entre los dias transcurridos desde la fecha indicada hasta la fecha actual
+     * y los dias de años pasados segun el planeta elegido
+     */
     public static double calculadorPlanetario(LocalDate fechaNacimiento, Planeta planeta){
     long dias =Ejercicio2.diasEdad(fechaNacimiento);
     float calculo=0;
