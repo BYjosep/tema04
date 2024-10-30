@@ -5,7 +5,7 @@ import java.time.format.DateTimeFormatter;
 import java.util.Scanner;
 
 public class Ejercicio3 {
-    public static enum Planeta{
+    public enum Planeta{
         MERCURIO,VENUS,TIERRA,MARTE,JUPITER,SATURNO,URANO,NEPTUNO
     }
     public static void main(String[] args) {
