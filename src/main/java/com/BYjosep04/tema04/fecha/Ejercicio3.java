@@ -9,7 +9,9 @@ public class Ejercicio3 {
         MERCURIO,VENUS,TIERRA,MARTE,JUPITER,SATURNO,URANO,NEPTUNO
     }
     public static void main(String[] args) {
-        String nacimiento; Planeta eleccion = null; int planeta;double resultado;
+        String nacimiento;
+        Planeta eleccion = null;
+        int planeta;double resultado;
         Scanner scanner = new Scanner(System.in);
         System.out.println("Ingrese la fecha de nacimiento de la siguiente forma: dd/mm/yyyy");
         nacimiento = scanner.nextLine();
@@ -27,6 +29,10 @@ public class Ejercicio3 {
                 case 6-> eleccion= Planeta.SATURNO;
                 case 7-> eleccion= Planeta.URANO;
                 case 8-> eleccion= Planeta.NEPTUNO;
+                default -> {
+                    System.out.println("EL VALOR ESCRITO ES INCORRECTO");
+                    System.out.println("Introduzca un numero no valido");
+                }
             }
         }while (planeta <= 0 || planeta >= 9);
         scanner.close();
