@@ -23,6 +23,11 @@ public class Ejercicio4 {
         System.out.println(fechaZodiaco(fechaNacimiento));
     }
 
+    /**
+     * apartir de una fecha devuelve el signo del zodiaco
+     * @param fechanacimitnto introduce la fecha deseada
+     * @return devuelve un valor enumerado de los signos del zodiaco
+     */
     public static String fechaZodiaco(LocalDate fechanacimitnto) {
         int mes = fechanacimitnto.getMonthValue();
         int dia = fechanacimitnto.getDayOfMonth();
