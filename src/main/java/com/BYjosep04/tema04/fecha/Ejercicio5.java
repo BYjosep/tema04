@@ -1,9 +1,6 @@
 package com.BYjosep04.tema04.fecha;
 
-//import java.time.LocalDate;
-
 import java.time.LocalDateTime;
-
 import java.util.Scanner;
 
 public class Ejercicio5 {
