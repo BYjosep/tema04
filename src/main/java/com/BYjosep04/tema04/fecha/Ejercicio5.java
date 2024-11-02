@@ -1,35 +1,81 @@
 package com.BYjosep04.tema04.fecha;
 
 //import java.time.LocalDate;
+
 import java.time.LocalDateTime;
-import java.time.format.DateTimeFormatter;
+
 import java.util.Scanner;
 
 public class Ejercicio5 {
     public static void main(String[] args) {
-        String salida;
-        float velocidad;
-        String horaLlegada;
+        // Variables
+        double velocidad;
+        String fechaHoraSalidaStr, resultado;
+        /* *********** */
         Scanner scanner = new Scanner(System.in);
-        System.out.println("Ingrese la fecha de salida de la siguiente forma: dd/mm/yyyy hh:mm:ss");
-        salida = scanner.nextLine();
-        System.out.println("Ingreses la velocidad en Km/h");
-        velocidad = Float.parseFloat(scanner.nextLine());
-        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd/MM/yyyy HH:mm:ss");
-        LocalDateTime fechaSalida = LocalDateTime.parse(salida,formatter);
-        horaLlegada = fechaHoraLlegada(LocalDateTime.parse(fechaSalida.format(formatter)), velocidad);
+        System.out.println("Ingrese la fecha y hora de salida (dd/MM/yyyy HH:mm:ss) ");
+        fechaHoraSalidaStr = scanner.nextLine();
+        System.out.println("Ingrese la velocidad de la nave (km/h) ");
+        velocidad = scanner.nextDouble();
+        scanner.close();
+        // Calcular el tiempo de viaje y obtener la cadena de resultado
+        resultado = calcularViajeAMarte(fechaHoraSalidaStr, velocidad);
+        System.out.println(resultado);
     }
 
-    public static String fechaHoraLlegada(LocalDateTime fechaSalida, float velocidad ){
-    final int DISTANCIA=255_000_000 ;
-    String llegada="";
-    int horas, minutos, segundos;
-    int dias, meses, anos;
+    /**
+     * Calcula el tiempo de viaje a Marte y genera una cadena con los detalles del viaje.
+     * Una cadena de texto con los detalles del viaje, incluyendo tiempo total,
+     * fecha estimada de llegada y desglose en horas, minutos, segundos, días, meses y años.
+     * Este  calcula el tiempo que tomaría un viaje a Marte, dado una
+     * fecha y hora de salida yuna velocidad constante.
+     * Se asume una distancia promedio a Marte y se realiza una conversión
+     * del tiempo total en horas a un formato más legible.
+     * **Nota:** El cálculo de meses y años es una aproximación, asumiendo 30 días por mes.
+     * @param fechaHoraSalidaStr La fecha y hora de salida del viaje en formato "dd/MM/yyyy HH:mm:ss".
+     * @param velocidad La velocidad de la nave espacial en kilómetros por hora.
+     * @return El resultado final incluye la fecha y hora de llegada estimada.
+     */
 
+    public static String calcularViajeAMarte(String fechaHoraSalidaStr, double velocidad) {
+        // constantes y  Variables
+        final double DISTANCIA = 225000000.0;
+        final int HMS = 60;
+        final int HORAS_A_DIAS = 24;
+        double tiempoViajeHoras;
+        long dias, horas, minutos, segundos;
+        int meses, anos;
+        String resultado;
 
+        // Conversor a  LocalDateTime
+        LocalDateTime fechaHoraSalida = LocalDateTime.parse(fechaHoraSalidaStr,
+                java.time.format.DateTimeFormatter.ofPattern("dd/MM/yyyy HH:mm:ss"));
+        java.time.format.DateTimeFormatter formatter = java.time.format.DateTimeFormatter.ofPattern("dd/MM/yyyy HH:mm:ss");
 
-    //LocalDateTime dia= fechaSalida.;
+        /* ***** Calculador ***** */
+        tiempoViajeHoras = DISTANCIA / velocidad;
 
-        return llegada;
+        dias     = (long) (tiempoViajeHoras / HORAS_A_DIAS);
+        horas    = (long) (tiempoViajeHoras % HORAS_A_DIAS);
+        minutos  = (long) (tiempoViajeHoras - dias *  HORAS_A_DIAS - horas) * HMS;
+        segundos = (long) ((tiempoViajeHoras - dias * HORAS_A_DIAS - horas) * HMS - minutos) * HMS;
+
+        meses = (int) (dias / 30);
+        anos  = meses / 12;
+        meses = meses % 12;
+
+        // Calcular la fecha y hora de llegada
+        LocalDateTime fechaHoraLlegada = fechaHoraSalida.plusDays(dias)
+                .plusHours(horas)
+                .plusMinutes(minutos)
+                .plusSeconds(segundos);
+
+        // Crear la cadena de resultado
+        resultado = "Al salir en la fecha: " + fechaHoraSalida.format(formatter) + " con la velocidad de " +
+                velocidad + "  Km/h" + " el viaje tarda: " + horas + " horas, " + minutos + " minutos, " +
+                segundos + " segundos, " + dias + " días, " + meses + " meses, " + anos + " años." +
+                " La fecha estimada de llegada es: " + fechaHoraLlegada.format(formatter);
+
+        return resultado;
     }
 }
