@@ -30,10 +30,10 @@ public class Ejercicio5 {
      * del tiempo total en horas a un formato más legible.
      * **Nota:** El cálculo de meses y años es una aproximación, asumiendo 30 días por mes.
      * @param fechaHoraSalidaStr La fecha y hora de salida del viaje en formato "dd/MM/yyyy HH:mm:ss".
+     *                           En formato String
      * @param velocidad La velocidad de la nave espacial en kilómetros por hora.
      * @return El resultado final incluye la fecha y hora de llegada estimada.
      */
-
     public static String calcularViajeAMarte(String fechaHoraSalidaStr, double velocidad) {
         // constantes y  Variables
         final double DISTANCIA = 225000000.0;
