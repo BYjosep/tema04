@@ -45,9 +45,8 @@ public class Ejercicio5 {
         String resultado;
 
         // Conversor a  LocalDateTime
-        LocalDateTime fechaHoraSalida = LocalDateTime.parse(fechaHoraSalidaStr,
-                java.time.format.DateTimeFormatter.ofPattern("dd/MM/yyyy HH:mm:ss"));
-        java.time.format.DateTimeFormatter formatter = java.time.format.DateTimeFormatter.ofPattern("dd/MM/yyyy HH:mm:ss");
+         java.time.format.DateTimeFormatter formatter = java.time.format.DateTimeFormatter.ofPattern("dd/MM/yyyy HH:mm:ss");
+        LocalDateTime fechaHoraSalida = LocalDateTime.parse(fechaHoraSalidaStr, formatter);
 
         /* ***** Calculador ***** */
         tiempoViajeHoras = DISTANCIA / velocidad;
