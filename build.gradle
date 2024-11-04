@@ -10,7 +10,7 @@ repositories {
     mavenCentral()
 }
 application{
-    mainClassName = "com.BYjosep04.tema04.Ejercicio6"
+    mainClassName = "com.BYjosep04.tema04.fecha.Ejercicio7"
 }
 
 dependencies {
