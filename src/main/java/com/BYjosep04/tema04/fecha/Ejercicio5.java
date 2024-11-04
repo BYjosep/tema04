@@ -36,7 +36,7 @@ public class Ejercicio5 {
      */
     public static String calcularViajeAMarte(String fechaHoraSalidaStr, double velocidad) {
         // constantes y  Variables
-        final double DISTANCIA = 225000000.0;
+        final double DISTANCIA = 225_000_000;
         final int HMS = 60;
         final int HORAS_A_DIAS = 24;
         double tiempoViajeHoras;
