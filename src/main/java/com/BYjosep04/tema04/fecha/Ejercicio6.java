@@ -28,7 +28,8 @@ public class Ejercicio6 {
         // Define el formato de la fecha y hora
         DateTimeFormatter dateFormatter = DateTimeFormatter.ofPattern("dd/MM/yyyy HH:mm:ss");
         // Configura la fecha de Año Nuevo
-        LocalDateTime newYear = LocalDateTime.of(LocalDateTime.now().getYear() + 1, 1, 1, 0, 0, 0);
+        LocalDateTime newYear = LocalDateTime.of(LocalDateTime.now().getYear() +
+                1, 1, 1, 0, 0, 0);
 
         // Usar el Timer para actualizar la pantalla cada segundo
         timer.scheduleAtFixedRate(new TimerTask() {
@@ -47,7 +48,8 @@ public class Ejercicio6 {
                 days    = ChronoUnit.DAYS.between(now.plusMonths(months), newYear);
                 hours   = ChronoUnit.HOURS.between(now.plusMonths(months).plusDays(days), newYear);
                 minutes = ChronoUnit.MINUTES.between(now.plusMonths(months).plusDays(days).plusHours(hours), newYear);
-                seconds = ChronoUnit.SECONDS.between(now.plusMonths(months).plusDays(days).plusHours(hours).plusMinutes(minutes), newYear);
+                seconds = ChronoUnit.SECONDS.between(now.plusMonths(months).plusDays(days)
+                        .plusHours(hours).plusMinutes(minutes), newYear);
 
 
                 System.out.printf("Faltan: %d meses, %d días, %d horas, %d minutos, %d segundos\n",
