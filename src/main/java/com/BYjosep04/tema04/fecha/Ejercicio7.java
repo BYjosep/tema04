@@ -45,6 +45,11 @@ public class Ejercicio7 {
 
     }
 
+    /**
+     * Hace el cambio sea visibles
+     * @param fechaModificada Fecha modificada en el submenu
+     * @return Devuelce la fecha modificada
+     */
     public static String modificador(LocalDate fechaModificada) {
         String fechaFormateada;
 
@@ -52,6 +57,12 @@ public class Ejercicio7 {
         return fechaFormateada;
     }
 
+    /**
+     * Modifica la fecha, en el caso de este archivo para haer visible la fecha se tiene
+     * que hacer efectivo llamando al metodo modificador
+     * @param fechaInicio fecha con la que se opera
+     * @return Devuelve una fecha modificada
+     */
     public static LocalDate submenu2(LocalDate fechaInicio) {
         LocalDate fechaFin = fechaInicio;
         byte eleccion;
